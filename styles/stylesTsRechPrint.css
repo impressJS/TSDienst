@@ -1,0 +1,63 @@
+* {
+    border: medium none;
+}
+p {
+    width: 100%;
+}
+body {
+}
+#kundenanschrift {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: medium none;
+    clear: both;
+    float: left;
+    height: 200px;
+    left: 50px;
+    position: relative;
+    top: 0;
+    width: 225px;
+}
+#kundenanschrift > div {
+    background: none repeat scroll 0 0 #FFFFFF;
+    clear: right;
+    display: inline-table;
+    float: left;
+    margin: 2px;
+}
+#rechnungsanschrift {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: medium none;
+    float: right;
+    height: 200px;
+    width: 225px;
+}
+#rechnungsanschrift > div {
+    background: none repeat scroll 0 0 #FFFFFF;
+    clear: right;
+    display: inline-table;
+    float: left;
+    margin: 2px;
+}
+#logo {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #FFFFFF;
+    background-image: url("../resources/TSdesign-Logo+transparent.gif");
+    background-origin: inherit;
+    background-position: -90px 0;
+    background-repeat: repeat;
+    background-size: 660px 107px;
+    height: 115px;
+    margin: 0 0 50px 320px;
+    width: 478px;
+}
+#tabelle {
+    clear: both;
+    margin: 0 20px;
+}
+.adresses {
+    height: 200px;
+    margin: 0 0 0 120px;
+    overflow: hidden;
+    width: 80%;
+}

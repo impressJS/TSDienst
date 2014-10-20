@@ -1,0 +1,24 @@
+<!--
+Template for printing the Bill
+-->
+<!--<link href="styles/stylesTsRechPrint.css" rel="stylesheet" type="text/css" media="screen,print"/>-->
+<div class='adresses'>
+    <div id="kundenanschrift">
+        <h3>Kundenanschrift</h3>
+
+        <p  ng-bind="co.name"></p>
+        <p ng-bind="co.street"></p>
+        <p ng-bind="co.postalCode"></p>
+        <p ng-bind="co.city"></p>
+    </div>
+    <div id="rechnungsanschrift">
+        <h3>Rechnungsanschrift</h3>
+        <p  ng-bind="cl.name"></p>
+        <p ng-bind="cl.street"></p>
+        <p ng-bind="cl.postalCode"></p>
+        <p ng-bind="cl.city"></p>
+    </div>
+</div>
+<div id="logo"></div>
+
+<div ng-include="'partials/billList.html'"></div>

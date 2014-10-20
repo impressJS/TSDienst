@@ -1,0 +1,37 @@
+<table>
+    <thead>
+
+    </thead>
+    <tbody>
+        <tr ng-repeat="itm in items">
+            <td><a ng-href="#/chd_{{$index}}/">{{itm.tbPostenDate|date:'dd.MM.yy'}}</a></td>
+            <td><a ng-href="#/chd_{{$index}}">{{itm.tbPostenText}}</a></td>
+            <td><a ng-href="#/chd_{{$index}}">{{itm.tbPostenProStd|euro}}</a></td>
+            <td><a href="#/chd_{{$index}}">{{itm.tbPostenStdAnz}}</a></td>
+            <td><a ng-href="#/chd_{{$index}}">{{itm.tbPostenStdAnz * itm.tbPostenProStd|euro}}</a></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td></td>
+            <td>Gesamt</td>
+            <td></td>
+            <td></td>
+            <td>{{calcEndSum() | euro}}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>MWST</td>
+            <td></td>
+            <td></td>
+            <td>{{$parent.gesamt.sumMwst | euro}}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Gesamt</td>
+            <td></td>
+            <td></td>
+            <td>{{$parent.gesamt.endBetrag | euro}}</td>
+        </tr>
+      </tfoot>
+</table>

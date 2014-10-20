@@ -1,0 +1,161 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two:700,400italic,700italic,400);
+body {
+  font-family: 'Lobster Two', cursive;
+  background-color: #fff;
+  min-width: 240px;
+}
+input{
+  padding-left: 5px;
+}
+button{
+  height: 20px;
+  margin-top: 1px;
+  margin-left: 10px;
+  border: inset 2px;
+}
+
+#wrapper{
+  width: 960px
+}
+.tsdatespan {
+  vertical-align: bottom !important;
+}
+.currency, .hours {
+  text-align: right;
+}
+.drucken {
+  text-decoration: none !important;
+}
+#logo { 
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: #FFFFFF;
+  background-image: url("../resources/TSdesign-Logo+transparent.gif");
+  background-origin: inherit;
+  background-position: -135px 0;
+  background-repeat: repeat;
+  background-size: 660px 107px;
+  border: medium none;
+  float: left;
+  height: 110px;
+  width: 396px;
+}
+#kundenanschrift > div, #rechnungsanschrift > div {
+  background: none repeat scroll 0 0 #AAAAAA;
+  clear: right;
+  display: inline-table;
+  float: right;
+  margin: 2px;
+}
+#kundenanschrift,#rechnungsanschrift,#posten {
+  background: none repeat scroll 0 0 #AAAAAA;
+  border: 2px solid #0000FF;
+  float: left;
+  padding: 0 10px 20px;
+  width: 225px;
+  height: 100%;
+}
+#kundenanschrift div.input-group label.input-group-addon{
+  width: 70px;
+}
+#kundenanschrift div.input-group label.input-group-addon input.form-control{
+  width: 100px;
+}
+#kundenanschrift>legend,
+#rechnungsanschrift>legend,
+#posten>legend{
+  top: 11px;
+  background: white;
+  position: relative;
+  border: black 2px solid;
+  border-top: blue 2px solid;
+  margin-bottom: 12px;
+  padding: 0 15px 0 6px;
+}
+#flex1 {
+  align-items: baseline;
+  clear: both;
+  display: block;
+  float: none;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+#flex2,#tabelle {
+  align-items: baseline;
+  clear: both;
+  justify-content: space-between;
+  padding: 0 20px;
+  width: 960px;
+  height: auto;
+  display: inline-block;
+}
+#tabelle{
+  width: 94%;
+}
+#posten{
+  width: 91%;
+  height: auto;
+}
+#posten div div {
+  float: left;
+  /*width: 200px;*/
+}
+#posten div div label {
+  border: 0 solid #000000;
+  clear: left;
+  float: left;
+  text-align: center;
+  width: 100%;
+}
+#posten div div input {
+  border: 1px solid #000000;
+  width: 99%;
+}
+#printIt {
+  display: none;
+}
+#tabelle table,#tabelle table thead,#tabelle table tbody,#tabelle table tfoot{
+  display: block;
+  width: 100%;
+}
+#tabelle table tfoot{
+  border-top: 2px solid black;  
+}
+#tabelle tr{
+  width: 100%;
+  display: table;
+  opacity: 0.5;
+}
+#tabelle tr:hover{
+  opacity: 1;
+  background-color: lightgray;
+}
+#tabelle tr td:nth-child(1){
+  width: 20%;
+  text-align: left;
+}
+#tabelle tr td:nth-child(2){
+  width: 50%;
+  text-align: left;
+}
+#tabelle tr td:nth-child(3){
+  width: 10%;
+  text-align: right;
+}
+#tabelle tr td:nth-child(4){
+  width: 10%;
+  text-align: right;
+}
+#tabelle tr td:nth-child(5){
+  width: 10%;
+  text-align: right;
+}
+#tabelle a {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  display: block;
+}
+#tabelle a:hover{
+  opacity: 1;
+}

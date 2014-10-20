@@ -1,0 +1,53 @@
+<center ng-hide="printMode">
+    <button go-click="/print" ng-disabled="items.length === 0" ng-style="disableAnker()">Drucken</button>
+    <a class="drucken" href="#/print"  ng-style="disableAnker()">Drucken</a>
+</center>
+<div id="tabelle" class='table-striped  table-responsive ' ng-if="items.length !== 0">
+    <table class='table table-hover'>
+        <thead>
+            <tr>
+                <td class="tblPosten_lfnr">lfNr.</td>
+                <td class="tblPosten_datum">Datum</td>
+                <td class="tblPosten_beschreibung">Beschreibung</td>
+                <td class="tblPosten_kostenProStd">Eur p. Std</td>
+                <td class="tblPosten_anzStd">Std, Anz.</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in items">
+                <td>{{$index}}</td>
+                <td>{{item.tbPostenDate|date:'dd.mm.yyyy'}}</td>
+                <td>{{item.tbPostenText}}</td>
+                <td class="currency">{{item.tbPostenProStd| euro}}</td>
+                <td class="hours">{{item.tbPostenStdAnz}}</td>
+                <td >
+                    <button  ng-hide="printMode" go-click='#/edit/{{$index}}' class="glyphicon glyphicon-edit"></button>
+                    <button  ng-hide="printMode" ng-click='delete($index)' class="glyphicon glyphicon-remove-sign"></button>
+                </td>
+            </tr>
+            <tr ng-if='items.length !== 0'>
+                <td></td>
+                <td></td>
+                <td >Summe</td>
+                <td></td>
+                <td class="currency">{{calcEndSum() | euro}}</td>
+                <td></td>
+            </tr>
+            <tr ng-if='items.length !== 0'>
+                <td colspan="2"></td>
+                <td colspan="2">Mwst.</td>
+                <td class="currency">{{calcEndSum() * 0.19 | euro}}</td>
+                <td></td>
+            </tr>
+            <tr ng-if='items.length !== 0'>
+                <td colspan="2"></td>
+                <td colspan="2">Gesamtsumme</td>
+                <td class="currency">{{calcEndSum() * 0.19 + calcEndSum() | euro}}</td>
+                <td></td>
+            </tr>
+        </tbody>
+        <tfoot>
+
+        </tfoot>
+    </table>

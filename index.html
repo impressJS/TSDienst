@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app='tsRechApp'>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link href="styles/stylesTsRech.css" rel="stylesheet" type="text/css"/>
+        <script src="js/libs/angular.js" type="text/javascript"></script>
+        <script src="js/libs/angular-route.min.js" type="text/javascript"></script>
+        <script src="js/app.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="wrapper" ng-controller="PostenController" ng-init="initVars()" ng-cloak>>
+            <div id="flex1">
+                <fieldset id="kundenanschrift">
+                    <legend>Kundenanschrift</legend>
+
+                    <div><label for="name">Name:</label>
+                        <input value="{{co.name}}" id="name" ></div>
+                    <div><label for="strasse">Strasse:</label>
+                        <input value="{{co.street}}"  id="strasse" ></div>
+                    <div><label for="plz">PLZ:</label>
+                        <input value="{{co.postalCode}}"  id="plz" ></div>
+                    <div><label for="ort">Ort:</label>
+                        <input value="{{co.city}}"  id="ort" ></div>
+                </fieldset>
+                <div id="logo">
+                    <img src="" id="logoImg">
+                </div>
+                <fieldset id="rechnungsanschrift">
+                    <legend>Rechnungsanschrift</legend>
+
+                    <div><label for="rechName">Name:</label>
+                        <input value="{{cl.name}}" ></div>
+                    <div><label for="strasse">Strasse:</label>
+                        <input value="{{cl.street}}" ></div>
+                    <div><label for="rechPlz">PLZ:</label>
+                        <input value="{{cl.postalCode}}" ></div>
+                    <div><label for="rechOrt">Ort:</label>
+                        <input value="{{cl.city}}" ></div>
+                </fieldset>
+            </div>
+            <div id="flex2" >
+                <fieldset id="posten">
+                    <legend>Posten</legend>
+                    <div>
+                        <form>
+                            <div ng-repeat="(el,ee) in profile" ng-cloak="">
+                                <label>{{ee[0]}}</label>
+                                <input ng-model='item[ee[1]]' />{{el}}</div>
+                            <div><label>&nbsp;</label>
+                                <a ng-href="#/add/" o_ng-click="addPosten()">Add</a></div>
+                        </form>
+                        {{item}}
+                    </div>
+                </fieldset>
+            </div>
+            <div id="tabelle" ng-cloak="" >
+                <hr>
+                <div ng-view></div>
+            </div>
+            <div id="impressum">
+
+            </div>
+        </div>
+
+    </body>
+</html>
